@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+		
+	{% block above %}
+	    
+		<!--education start -->
+		<section id="project" class="project">
+			
+			<div class="section-heading text-center">
+				<h2>Project</h2>
+			<div class="container">
+
+				<div class="row">
+					{% for data in project_data %}
+	
+					<div class="col-md-16">
+	
+                		<div class="card" style="width: 30%;">
+                    
+                        	<img src='/media/{{data.project_image}}'  />
+                     
+                    		<div class="card-body">
+                      			<h5 class="card-title">{{data.project_name}}</h5>
+                      			<p class="card-text">
+									{{data.project_description}}
+								</p>
+                    		</div>
+                   
+                   
+                  		</div>
+ 
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>			
+			
+
+
+	</section>
+{% endblock %}
+

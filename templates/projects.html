@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+		
+{% block above %}
+	
+		<!--portfolio start -->
+		<section id="portfolio" class="portfolio">
+			<div class="portfolio-details">
+				<div class="section-heading text-center">
+					<h2>portfolio</h2>
+				</div>
+				<div class="container">
+					<div class="portfolio-content">
+						<div class="isotope">
+							<div class="row">
+								{% for data in project_data %}
+								<div class="col-sm-6">
+									<div class="item">
+										<img src="/media/{{data.project_image}}" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="#">
+												<b>{{data.project_name}}</b><br/>
+												{{data.project_description}}
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+								{% endfor %}
+
+							</div><!-- /.row -->
+						</div>
+						<!--/.isotope-->
+					</div><!--/.gallery-content-->
+				</div><!--/.container-->
+			</div><!--/.portfolio-details-->
+
+		</section><!--/.portfolio-->
+		<!--portfolio end -->
+
+
+        {% endblock %}

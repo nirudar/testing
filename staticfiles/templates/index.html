@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block above %}
+
+
+<!--about start -->
+<section id="about" class="about">
+    <div class="section-heading text-center">
+        <h2>about me</h2>
+    </div>
+	{% for data in aboutus_data %}
+
+		<!--welcome-hero start -->
+		<section id="welcome-hero" class="welcome-hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="header-text">
+							<h2>hi <span>,</span> i am <br> Niranjan <br> Darshan <span>.</span>   </h2>
+							<p>Software Developer, Data Researcher  and OSS Contributor</p>
+							<a href='/media/{{data.cv_file}}' download>download resume</a>
+						</div><!--/.header-text-->
+					</div><!--/.col-->
+				</div><!-- /.row-->
+			</div><!-- /.container-->
+
+		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
+
+    <div class="container">
+        <div class="about-content">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="single-about-txt">
+                        <h3>
+                            I am Professional Software Engineer, proficient in Data Engineering, and an active contributor to OSS communities. My passion lies in crafting interactive websites using a diverse range of technologies. Currently, I serve as a Software Engineer within the IT industry, where I specialize in Python and Django frameworks, among others.
+
+                        </h3>
+                        <p>
+                            As an experienced Software Engineer, I specialize in  cutting-edge technologies to address complex challenges with innovative solutions. With a diverse expertise spanning various domains, I focus particularly on various problem-solving strategies.
+
+                            A Central aspect of my work revolves around Web Designer, Problem solver,  data visualization and analysis, where I excel as a meticulous Engineer. Utilizing a range of techniques, I cut up data to derive meaningful insights, effectively conveying findings through compelling visual representations.
+                            
+                            Throughout my career, I've led numerous Android projects, developed sophisticated web applications, and contributed to impactful data analysis initiatives. My contributions extend to the global stage, with research findings showcased at esteemed international conferences, solidifying my reputation as a proficient Engineer.</p>
+                        <div class="row">
+							
+                            <div class="col-sm-4">
+								<div class="single-about-add-info">
+                                	<h3>phone</h3>
+                                    <p>+91 {{data.phone}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="single-about-add-info">
+                                    <h3>email</h3>
+                                    <p class="img-fluid">{{data.email}}</p>
+                                </div>
+                            </div>
+						    </div>
+                    </div>
+                </div>
+                 <div class="col-sm-offset-1 col-sm-5">
+                    <div class="single-about-img">
+                        <img src='/media/{{data.profile_image}}' alt="profile_image" class="Img-fluid"/>
+                        <div class="about-list-icon">
+                            <ul><!-- / li -->
+                              
+                                <li>
+                                    <a href="{{data.linkedin}}">
+                                        <i  class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </li><!-- / li -->
+                                <li>
+                                    <a href="{{data.github}}">
+                                        <i  class="fa fa-github" aria-hidden="true"></i>
+                                    </a>
+                                </li><!-- / li -->
+                                
+                                
+                            </ul><!-- / ul -->
+                        </div><!-- /.about-list-icon -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+	{% endfor %}
+
+</section><!--/.about-->
+<!--about end -->
+
+		
+
+{% endblock %}
